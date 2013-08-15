@@ -11,16 +11,16 @@ import json
 # Before starting, visit the Twitter developer page and create a new application: https://dev.twitter.com/apps/new
 # Twitter will assign your application a consumer Key, consumer secret, oauth token, and oauth token secret. 
 
-CONSUMER_KEY = 'NgbX33wZQedC6dZQFroduQ'
-CONSUMER_SECRET = 'Z44OVbKPXmtiSxxTXV3x5ol50a6H47KWym8MFOY'
-OAUTH_TOKEN = '18477675-MajhhOjq2h6fmrQt45DaRVWdwlqT0TEi4V5qtrK2k'
-OAUTH_TOKEN_SECRET = 'GDSAfLLLDwN29Q7dIn7Y5zHvARuJ1MkZ47z2CLYlmw'
+CONSUMER_KEY = ''
+CONSUMER_SECRET = ''
+OAUTH_TOKEN = ''
+OAUTH_TOKEN_SECRET = ''
 
 auth = twitter.oauth.OAuth(OAUTH_TOKEN, OAUTH_TOKEN_SECRET, CONSUMER_KEY, CONSUMER_SECRET) 
 
 twitter_api = twitter.Twitter(auth=auth)
 
-pyresponse = dict(twitter_api.search.tweets(q='Egypt AND Brotherhood AND :('))
+pyresponse = dict(twitter_api.search.tweets(q=''))
 
 statuses =  pyresponse["statuses"]
 
